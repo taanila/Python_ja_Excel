@@ -1,6 +1,6 @@
 # Pythonilla lasketut tulokset Exceliin
 
-Voit ladata esimerkit omalle koneelle: Napsauta **Code** (vihreä pudotusvalikko) ja valitse **Download ZIP**. Pura ZIP-paketti itsellesi sopivaan hakemistoon.
+*Voit ladata esimerkit omalle koneelle: Napsauta **Code** (vihreä pudotusvalikko-painike) ja valitse **Download ZIP**. Pura ZIP-paketti itsellesi sopivaan hakemistoon.*
 
 Excelissä on helppokäyttöinen käyttöliittymä tiedon järjestelyyn, esittämiseen ja laskentaan. Python tarjoaa Exceliä monipuolisemmat laskentamahdollisuudet erityisesti data-analytiikkaan. Onneksi Pythonin ja Excelin yhteiskäyttö on nykyään mahdollista. Voit hyödyntää Pythonin monipuolisia laskentamahdollisuuksia ja kirjoittaa tulokset Exceliin.
 
