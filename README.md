@@ -46,7 +46,7 @@ Suoraan tiedostoon kirjoittaminen sopii tilanteisiin, joissa ei tarvita reaaliai
 ## Microsoftin Python in Excel
 
 Microsoftilla on oma versio Pythonin ja Excelin yhteiskäyttöön. Tämä poikkeaa **xlwings**- ja **xlsxwriter**-paketeista ainakin seuraavissa kohdissa:
-- **Python in Excel** ei ainakaan tällä hetkellä ole tarjolla kaikissa Office-paketin versioissa.
+- **Python in Excel** ei ainakaan tätä kirjoitettaessa ole tarjolla kaikissa Office-paketin versioissa.
 - Python-koodit tallennetaan yksittäisiin Excelin soluihin. Jos koodia on paljon ja se hajaantuu ympäri työkirjaa yksittäisiin soluihin, niin kokonaisuuden hallinta voi olla vaikeaa.
 - Koodi lähetetään aina suoritettavaksi Microsoftin pilvipalveluun. Samalla lähetetään pilvipalveluun myös data, jota koodi käsittelee.
 
