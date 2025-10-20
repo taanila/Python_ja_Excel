@@ -33,7 +33,7 @@ Vaativampaan tiedon kirjoittamiseen ja muotoiluun voit käyttää muita **xlwing
 
 Voit asentaa **xlwings_lite**n Excelin **Add-ins** (Apuohjelmat) -toiminnolla. Asennusohje: https://lite.xlwings.org/installation. Asennuksen jälkeen Excelin työkalunauhassa on **xlwings_Lite**-painike, josta aukeaa **xlwings_Lite**-paneeli. Paneelissa on kaksi välilehteä: **main.py** ja **requirements.txt**. Asennetut paketit/kirjastot löydät **requirements.txt**-välilehdeltä. Voit lisätä paketin nimen listan viimeiseksi. Jos lisääminen ei aiheuta virheilmoitusta, niin voit käyttää kyseistä pakettia koodissasi. 
 
-Opi lisää tutustumalla Excel-esimerkkiin **laina_xlswings_lite.xlsx**. Huomaa, että **xlwings_lite**ä käytettäessä kaikki tarpeellinen on tallennettu kätevästi yhteen Excel-tiedostoon. **xlwings_Lite** välilehdelle olen lisännyt paketin **numpy-financial**.
+Opi lisää tutustumalla Excel-esimerkkiin **laina_xlswings_lite.xlsx**. Huomaa, että **xlwings_lite**ä käytettäessä kaikki tarpeellinen on tallennettu kätevästi yhteen Excel-tiedostoon. **xlwings_Lite**-paneelin **requirements.txt**-välilehdelle olen lisännyt paketin **numpy-financial**.
 
 ## xlsxwriter kirjoittaa suoraan Excel-tiedostoon
 
