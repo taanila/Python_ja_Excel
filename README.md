@@ -31,9 +31,9 @@ Vaativampaan tiedon kirjoittamiseen ja muotoiluun voit käyttää muita **xlwing
 
 **xlwings_lite** on uusin (ensimmäinen versio julkaistu 21.3.2025) tapa Pythonin ja Excelin yhteiskäyttöön. **xlwings_lite** tuo Pythonin Exceliin. Voit kirjoittaa koodia ja käyttää **xlwings**-paketin toimintoja Excelin sisällä. Samalla saat käyttöösi kaikki Pythonin tarjoamat monipuoliset laskentamahdollisuudet koneoppimisen mallit mukaan lukien. Et tarvitse omalle koneelle edes Python-asennusta. Useimmissa tapauksissa voit käyttää **xlwings_lite**ä myös **VBA**-kielisten makrojen sijasta Excelin automatisoimiseen. 
 
-Voit asentaa **xlwings_lite**n Excelin **Add-ins** (Apuohjelmat) -toiminnolla. Asennusohje: https://lite.xlwings.org/installation.
+Voit asentaa **xlwings_lite**n Excelin **Add-ins** (Apuohjelmat) -toiminnolla. Asennusohje: https://lite.xlwings.org/installation. Asennuksen jälkeen Excelin työkalunauhassa on **xlwings_Lite**-painike, josta aukeaa **xlwings_Lite**-paneeli. Paneelissa on kaksi välilehteä: **main.py** ja **requirements.txt**. Asennetut paketit/kirjastot löydät **requirements.txt**-välilehdeltä. Voit lisätä paketin nimen listan viimeiseksi. Jos lisääminen ei aiheuta virheilmoitusta, niin voit käyttää kyseistä pakettia koodissasi. 
 
-Opi lisää tutustumalla Excel-esimerkkiin **laina_xlswings_lite.xlsx**. Huomaa, että **xlwings_lite**ä käytettäessä kaikki tarpeellinen on tallennettu kätevästi yhteen Excel-tiedostoon.
+Opi lisää tutustumalla Excel-esimerkkiin **laina_xlswings_lite.xlsx**. Huomaa, että **xlwings_lite**ä käytettäessä kaikki tarpeellinen on tallennettu kätevästi yhteen Excel-tiedostoon. **xlwings_Lite** välilehdelle olen lisännyt paketin **numpy-financial**.
 
 ## xlsxwriter kirjoittaa suoraan Excel-tiedostoon
 
