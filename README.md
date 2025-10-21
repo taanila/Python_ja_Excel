@@ -39,7 +39,9 @@ Opi lisää tutustumalla Excel-esimerkkiin **laina_xlswings_lite.xlsx**. Huomaa,
 
 Excel-tiedoston luomiseen ja kirjoittamiseen tarkoitettu **xlsxwriter**-moduuli kirjoittaa 100 % yhteensopivia Excel-tiedostoja, joissa on mahdollista käyttää monipuolisesti Excelin muotoiluja. Moduuli on hyvin dokumentoitu osoitteessa https://xlsxwriter.readthedocs.io/.
 
-**Pandas**-kirjaston **to_excel**-funktion osaa käyttää kirjoittimena **xlsxwriter**ia jopa kokonaisen dataframen kirjoittamiseen kerralla tiedostoon. Dataframen otsikkorivin ja index-sarakkeen muotoilu oletusmuotoilusta poikkeavalla tavalla vaatii ylimääräistä vaivannäköä. Tätä valaisevat esimerkit löytyvät osoitteesta https://xlsxwriter.readthedocs.io/pandas_examples.html. 
+**Pandas**-kirjaston **to_excel**-funktion osaa käyttää kirjoittimena **xlsxwriter**ia jopa kokonaisen dataframen kirjoittamiseen kerralla tiedostoon. Dataframen otsikkorivin ja index-sarakkeen muotoilu oletusmuotoilusta poikkeavalla tavalla vaatii ylimääräistä vaivannäköä. Tätä valaisevat esimerkit löytyvät osoitteesta https://xlsxwriter.readthedocs.io/pandas_examples.html.
+
+Opi lisää esimerkistä **laina_xlsxwriter.ipynb**.
 
 Suoraan tiedostoon kirjoittaminen sopii tilanteisiin, joissa ei tarvita reaaliaikaista interaktiivisuutta Pythonin ja Excelin välillä. Tällaisia ovat esimerkiksi monet raportointitehtävät.
 
