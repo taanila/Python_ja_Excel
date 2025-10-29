@@ -35,6 +35,8 @@ Voit asentaa **xlwings_lite**n Excelin **Add-ins** (Apuohjelmat) -toiminnolla. A
 
 Opi lisää tutustumalla Excel-esimerkkiin **laina_xlswings_lite.xlsx**. Huomaa, että **xlwings_lite**ä käytettäessä kaikki tarpeellinen on tallennettu kätevästi yhteen Excel-tiedostoon. **xlwings_Lite**-paneelin **requirements.txt**-välilehdelle olen lisännyt paketin **numpy-financial**.
 
+Kannattaa myös tutustua Excel-esimerkkeihin Monte Carlo -simulaatioista xlwings Liten avulla (simu1.xlsx, asiakaspalvelupiste.xlsx, lehtikauppias.xlsx ja tuotantolinja.xlsx).
+
 ## xlsxwriter kirjoittaa suoraan Excel-tiedostoon
 
 Excel-tiedoston luomiseen ja kirjoittamiseen tarkoitettu **xlsxwriter**-moduuli kirjoittaa 100 % yhteensopivia Excel-tiedostoja, joissa on mahdollista käyttää monipuolisesti Excelin muotoiluja. Moduuli on hyvin dokumentoitu osoitteessa https://xlsxwriter.readthedocs.io/.
