@@ -10,7 +10,7 @@ Suoraan avoimeen Exceliin kirjoittaminen mahdollistaa vuorovaikutteisen Jupyter 
 
 Excel-tiedostot ovat samanlaisia riippumatta käyttöjärjestelmästä ja tiedostojen välityksellä tiedot voidaan avata myös muihin taulukkolaskentaohjelmiin. Suoraan tiedostoon kirjoitettaessa Excelin ei tarvitse olla edes asennettuna koneelle. Käytän **xlsxwriter**-moduulia tiedon kirjoittamiseen suoraan Excel-tiedostoon. **xlsxwriter**in asennus hoituu komennolla `conda install xlsxwriter` tai `pip install xlsxwriter`. **Pandas**-paketin kautta käytettynä **xlsxwriter** kirjoittaa kerralla kokonaisen dataframen tiedostoon.
 
-Testaan esimerkkien avulla neljää erilaista tapaa käyttää Pythonilla laskettuja tuloksia Excelissä.. Jokaisessa esimerkissä käytän laskentana annuiteettilainan lyhennystaulukon laskemista ja eri lähtötiedoilla varustettujen lainojen vertailua. Laskennan hoidan kahden funktion avulla, jotka olen määritellyt **annuiteetti.py**-moduulissa. Esimerkkien koodi toimii, jos **annuiteetti.py** on samassa kansiossa jupyter-muistion kanssa. Excel-esimerkissä **laina_xlwings_lite.xlsx** laskentaan käytettävät Python-funktiot on tallennettu Excel-tiedostoon. Varsinaisena aiheena on tulosten kirjoittaminen Exceliin, joten laskentaan käyttämäni funktiot ovat sivuosassa. Kannattaa kuitenkin tutustua funktioihin **annuiteetti.py**-moduulissa. Lienee myös hyödyllistä tutustua ennen Excel-esimerkkejä muistioon **laina.ipynb**, jossa suoritetaan esimerkeissä toistuvat laskelmat ilman tulosten siirtämistä Exceliin.
+Testaan esimerkkien avulla neljää erilaista tapaa käyttää Pythonilla laskettuja tuloksia Excelissä.. Jokaisessa esimerkissä käytän laskentana annuiteettilainan lyhennystaulukon laskemista ja eri lähtötiedoilla varustettujen lainojen vertailua. Laskennan hoidan kahden funktion avulla, jotka olen määritellyt **annuiteetti.py**-moduulissa (https://github.com/taanila/Python_ja_Excel/blob/main/annuiteetti.py). Esimerkkien koodi toimii, jos **annuiteetti.py** on samassa kansiossa jupyter-muistion kanssa. Excel-esimerkissä **laina_xlwings_lite.xlsx** laskentaan käytettävät Python-funktiot on tallennettu Excel-tiedostoon. Varsinaisena aiheena on tulosten kirjoittaminen Exceliin, joten laskentaan käyttämäni funktiot ovat sivuosassa. Kannattaa kuitenkin tutustua funktioihin **annuiteetti.py**-moduulissa. Lienee myös hyödyllistä tutustua ennen Excel-esimerkkejä muistioon **laina.ipynb** (https://github.com/taanila/Python_ja_Excel/blob/main/laina.ipynb), jossa suoritetaan esimerkeissä toistuvat laskelmat ilman tulosten siirtämistä Exceliin.
 
 ## xlwings-paketin view-funktio
 
@@ -19,11 +19,11 @@ Testaan esimerkkien avulla neljää erilaista tapaa käyttää Pythonilla lasket
 - luo uuden työkirjan
 - kirjoittaa **pandas**-tietorakenteen (**dataframe** tai **series**) työkirjaan.
 
-Jos **xlwings**-paketti on tuotu **xw**-nimisenä, niin **view**-funktio siirtää esimerkiksi **taulukko**-nimisen dataframen Exceliin komennolla `xw.view(taulukko)`. Opi lisää esimerkkimuistiosta **laina_view.ipynb**.
+Jos **xlwings**-paketti on tuotu **xw**-nimisenä, niin **view**-funktio siirtää esimerkiksi **taulukko**-nimisen dataframen Exceliin komennolla `xw.view(taulukko)`. Opi lisää esimerkkimuistiosta **laina_view.ipynb** (https://github.com/taanila/Python_ja_Excel/blob/main/laina_view.ipynb).
 
 ## xlwings-paketti
 
-Vaativampaan tiedon kirjoittamiseen ja muotoiluun voit käyttää muita **xlwings**-paketin toimintoja (https://docs.xlwings.org/en/latest/). Tällöin sinun pitää luoda **xlwings**illä piilotettu Excel-instanssi `app=xw.App(visible=False)` ja Excel-työkirja `wb=app.books[0]`. Ilman piilotusta hätäinen käyttäjä ehtii kajota Excel-tiedostoon tiedon kirjoituksen ja muotoilun aikana, josta yleensä seuraa ongelmia. Tietoa voi kirjoittaa **value**-ominaisuuden avulla, esimerkiksi `ws1.range(1, sarake).value = 'Annuiteettilainan lyhennystaulukko'. Opi lisää esimerkkimuistiosta **laina_xlswings.ipynb**.
+Vaativampaan tiedon kirjoittamiseen ja muotoiluun voit käyttää muita **xlwings**-paketin toimintoja (https://docs.xlwings.org/en/latest/). Tällöin sinun pitää luoda **xlwings**illä piilotettu Excel-instanssi `app=xw.App(visible=False)` ja Excel-työkirja `wb=app.books[0]`. Ilman piilotusta hätäinen käyttäjä ehtii kajota Excel-tiedostoon tiedon kirjoituksen ja muotoilun aikana, josta yleensä seuraa ongelmia. Tietoa voi kirjoittaa **value**-ominaisuuden avulla, esimerkiksi `ws1.range(1, sarake).value = 'Annuiteettilainan lyhennystaulukko'. Opi lisää esimerkkimuistiosta **laina_xlswings.ipynb** (https://github.com/taanila/Python_ja_Excel/blob/main/laina_xlwings.ipynb).
 
 **xlwings**-paketin toiminnoilla et voi kirjoittaa suoraan Excel-tiedostoon. Voit kuitenkin halutessasi tallentaa **xlwings**illä luodun työkirjan **save**-funktiolla, joka vastaa tiedoston tallentamista Excelin **Save As** -toiminnolla. Jos et määritä hakemistopolkua ja tiedoston nimeä, niin työkirja tallennetaan oletusnimellä sen hetkiseen oletushakemistoon. Jos hakemistossa on entuudestaan saman niminen tiedosto, niin se ylikirjoitetaan.
 
@@ -33,7 +33,7 @@ Vaativampaan tiedon kirjoittamiseen ja muotoiluun voit käyttää muita **xlwing
 
 Voit asentaa **xlwings_lite**n Excelin **Add-ins** (Apuohjelmat) -toiminnolla. Asennusohje: https://lite.xlwings.org/installation. Asennuksen jälkeen Excelin työkalunauhassa on **xlwings_Lite**-painike, josta aukeaa **xlwings_Lite**-paneeli. Paneelissa on kaksi välilehteä: **main.py** ja **requirements.txt**. Asennetut paketit/kirjastot löydät **requirements.txt**-välilehdeltä. Voit lisätä paketin nimen listan viimeiseksi. Jos lisääminen ei aiheuta virheilmoitusta, niin voit käyttää kyseistä pakettia koodissasi. 
 
-Opi lisää tutustumalla Excel-esimerkkiin **laina_xlswings_lite.xlsx**. Huomaa, että **xlwings_lite**ä käytettäessä kaikki tarpeellinen on tallennettu kätevästi yhteen Excel-tiedostoon. **xlwings_Lite**-paneelin **requirements.txt**-välilehdelle olen lisännyt paketin **numpy-financial**.
+Opi lisää tutustumalla Excel-esimerkkiin **laina_xlswings_lite.xlsx** (https://github.com/taanila/Python_ja_Excel/blob/main/laina_xlwings_lite.xlsx). Huomaa, että **xlwings_lite**ä käytettäessä kaikki tarpeellinen on tallennettu kätevästi yhteen Excel-tiedostoon. **xlwings_Lite**-paneelin **requirements.txt**-välilehdelle olen lisännyt paketin **numpy-financial**.
 
 Kannattaa myös tutustua Excel-esimerkkeihin Monte Carlo -simulaatioista xlwings Liten avulla (simu1.xlsx, asiakaspalvelupiste.xlsx, lehtikauppias.xlsx ja tuotantolinja.xlsx).
 
@@ -43,7 +43,7 @@ Excel-tiedoston luomiseen ja kirjoittamiseen tarkoitettu **xlsxwriter**-moduuli 
 
 **Pandas**-kirjaston **to_excel**-funktion osaa käyttää kirjoittimena **xlsxwriter**ia jopa kokonaisen dataframen kirjoittamiseen kerralla tiedostoon. Dataframen otsikkorivin ja index-sarakkeen muotoilu oletusmuotoilusta poikkeavalla tavalla vaatii ylimääräistä vaivannäköä. Tätä valaisevat esimerkit löytyvät osoitteesta https://xlsxwriter.readthedocs.io/pandas_examples.html.
 
-Opi lisää esimerkistä **laina_xlsxwriter.ipynb**.
+Opi lisää esimerkistä **laina_xlsxwriter.ipynb** (https://github.com/taanila/Python_ja_Excel/blob/main/laina_xlsxwriter.ipynb).
 
 Suoraan tiedostoon kirjoittaminen sopii tilanteisiin, joissa ei tarvita reaaliaikaista interaktiivisuutta Pythonin ja Excelin välillä. Tällaisia ovat esimerkiksi monet raportointitehtävät.
 
